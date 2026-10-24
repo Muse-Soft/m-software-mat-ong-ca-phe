@@ -1,0 +1,92 @@
+/* Biểu mẫu đặt mua — TEC-87. Tokens màu theo DESIGN.md TEC-85 (vàng mật ong + nâu cà phê). */
+:root {
+  --honey-500: #E8A020;
+  --honey-300: #F5C86B;
+  --honey-100: #FDF3DC;
+  --coffee-900: #3B2314;
+  --coffee-700: #5C3A21;
+  --coffee-500: #8A5A32;
+  --cream: #FFFBF2;
+  --white: #FFFFFF;
+  --danger: #C0392B;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--coffee-900);
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.page { padding: 16px; }
+
+.order { max-width: 640px; margin: 0 auto; }
+
+h1 { font-size: 28px; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 0 0 8px; }
+
+.intro { margin: 0 0 8px; }
+.note {
+  background: var(--honey-100);
+  border-left: 4px solid var(--honey-500);
+  padding: 12px;
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+.field { margin-bottom: 16px; }
+
+label { display: block; font-weight: 700; margin-bottom: 6px; }
+label span { color: var(--danger); }
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--coffee-500);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--coffee-900);
+}
+
+input:disabled, select:disabled { opacity: 0.6; }
+
+.error {
+  color: var(--danger);
+  font-size: 14px;
+  margin: 6px 0 0;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--coffee-900);
+  background: var(--honey-500);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled { opacity: 0.6; cursor: default; }
+
+.confirmation {
+  margin-top: 24px;
+  background: var(--honey-100);
+  border: 1px solid var(--honey-500);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.confirmation dl { margin: 12px 0 0; }
+.confirmation dt { font-weight: 700; margin-top: 8px; }
+.confirmation dd { margin: 0; }
+
+@media (min-width: 768px) {
+  .page { padding: 32px; }
+}

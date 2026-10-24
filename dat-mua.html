@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đặt mua — Nông trại Đắk Lắk: Mật ong rừng &amp; Cà phê nguyên chất</title>
+<link rel="stylesheet" href="dat-mua.css">
+</head>
+<body>
+<main class="page">
+  <section class="order">
+    <h1>Đặt mua</h1>
+    <p class="intro">Điền thông tin bên dưới, nông trại sẽ liên hệ xác nhận đơn hàng.</p>
+    <p class="note">Giá bán và phí giao hàng sẽ được nông trại xác nhận khi liên hệ (số liệu chờ Product Owner xác nhận theo DESIGN.md TEC-85, không tự điền).</p>
+
+    <form id="order-form" novalidate>
+      <div class="field">
+        <label for="ho-ten">Họ tên <span aria-hidden="true">*</span></label>
+        <input type="text" id="ho-ten" name="ho-ten" autocomplete="name" required>
+        <p class="error" id="err-ho-ten" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="so-dien-thoai">Số điện thoại <span aria-hidden="true">*</span></label>
+        <input type="tel" id="so-dien-thoai" name="so-dien-thoai" autocomplete="tel"
+               inputmode="numeric" placeholder="Ví dụ: 0901234567" required>
+        <p class="error" id="err-so-dien-thoai" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="dia-chi">Địa chỉ giao hàng <span aria-hidden="true">*</span></label>
+        <textarea id="dia-chi" name="dia-chi" rows="3" autocomplete="street-address" required></textarea>
+        <p class="error" id="err-dia-chi" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="tinh-thanh">Tỉnh/thành <span aria-hidden="true">*</span></label>
+        <input type="text" id="tinh-thanh" name="tinh-thanh" autocomplete="address-level1"
+               placeholder="Ví dụ: Đắk Lắk" required>
+        <p class="error" id="err-tinh-thanh" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="san-pham">Sản phẩm <span aria-hidden="true">*</span></label>
+        <select id="san-pham" name="san-pham" required>
+          <option value="">— Chọn sản phẩm —</option>
+          <option value="mat-ong-rung">Mật ong rừng nguyên chất</option>
+          <option value="mat-ong-hoa-ca-phe">Mật ong hoa cà phê</option>
+          <option value="ca-phe-hat">Cà phê hạt rang nguyên chất</option>
+          <option value="ca-phe-bot">Cà phê bột pha phin</option>
+        </select>
+        <p class="error" id="err-san-pham" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="quy-cach">Quy cách đóng gói <span aria-hidden="true">*</span></label>
+        <select id="quy-cach" name="quy-cach" required disabled>
+          <option value="">— Chọn sản phẩm trước —</option>
+        </select>
+        <p class="error" id="err-quy-cach" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="so-luong">Số lượng <span aria-hidden="true">*</span></label>
+        <input type="number" id="so-luong" name="so-luong" value="1" min="1" step="1"
+               inputmode="numeric" required>
+        <p class="error" id="err-so-luong" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="ghi-chu">Ghi chú (tùy chọn)</label>
+        <textarea id="ghi-chu" name="ghi-chu" rows="3"
+                  placeholder="Ví dụ: giao giờ hành chính, gọi trước khi giao..."></textarea>
+      </div>
+
+      <p class="error form-error" id="err-form" hidden></p>
+
+      <button type="submit" id="submit-btn">Gửi đơn đặt mua</button>
+    </form>
+
+    <section class="confirmation" id="confirmation" hidden aria-live="polite">
+      <h2>Đã nhận đơn!</h2>
+      <p>Đã nhận đơn — nông trại sẽ liên hệ xác nhận trong 24h.</p>
+      <p>Mã đơn tạm: <strong id="ma-don"></strong></p>
+      <dl id="tom-tat-don"></dl>
+    </section>
+  </section>
+</main>
+<script src="dat-mua.js"></script>
+</body>
+</html>
