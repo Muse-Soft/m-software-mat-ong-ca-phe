@@ -4,7 +4,6 @@ Trang giới thiệu (landing page) **tĩnh** — trang giới thiệu cho Mật
 
 > Mọi tên, số điện thoại, địa chỉ và số liệu trên trang đều là **dữ liệu mẫu**. Giá hiển thị là **giá mẫu**. Biểu mẫu (nếu có) chỉ là giao diện minh họa: không gửi dữ liệu đi đâu và không có backend.
 
-**Demo trực tuyến:** https://m-software-mat-ong-ca-phe.genalpha.dev
 **Giấy phép:** [MIT](LICENSE) © M-Software
 
 ## Cách xem
@@ -13,6 +12,7 @@ Mở `index.html` bằng trình duyệt (nhấp đúp, không cần máy chủ),
 
 | Tệp | Nội dung |
 |---|---|
+| `LICENSE` | Giấy phép MIT |
 | `README.md` | Tài liệu giới thiệu này |
 | `dat-mua.css` | Bảng định kiểu |
 | `dat-mua.html` | Trang nội dung |
