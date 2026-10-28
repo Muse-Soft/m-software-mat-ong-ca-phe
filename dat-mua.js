@@ -1,4 +1,4 @@
-// Biểu mẫu đặt mua — TEC-87. Theo DESIGN.md TEC-85 mục 6.
+// Biểu mẫu đặt mua. Theo đặc tả thiết kế mục 6.
 // Lưu ý: chưa có backend — gửi đơn hiện chỉ kiểm tra dữ liệu tại chỗ và
 // hiện thông báo xác nhận + mã đơn tạm. Tích hợp gửi đơn thật là việc riêng.
 (function () {
@@ -51,7 +51,7 @@
   }
 
   // Chọn sẵn sản phẩm khi trang chính dẫn tới kèm ?san-pham=<mã>
-  // (theo DESIGN.md: nút "Đặt mua" ở thẻ sản phẩm chọn sẵn sản phẩm đó).
+  // (theo đặc tả thiết kế: nút "Đặt mua" ở thẻ sản phẩm chọn sẵn sản phẩm đó).
   function chonSanTuThamSo() {
     var params = new URLSearchParams(window.location.search);
     var ma = params.get("san-pham");
